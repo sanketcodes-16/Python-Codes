@@ -1,3 +1,4 @@
+""" 
 # WAP to check the given number is prime or not.
 
 # num = 29
@@ -24,3 +25,51 @@ elif num > 1:
         print(num, "is not a prime number")
     else:
         print(num, "is a prime number")
+        
+===========================================================================================================
+# Find the largest number in the list.
+
+data = [12,54,105,20,2,8,86,45,30]
+
+largest = data[0]
+
+for i in data:
+    if i > largest:
+        largest = i
+        
+print(largest)
+
+============================================================================================================
+# WAP to find smallest number in the list.
+
+data = [12,54,105,20,2,8,-10,86,45,30]
+
+smallest = data[0]
+
+for i in data:
+    if i < smallest:
+        smallest = i
+        
+print(smallest)
+
+============================================================================================================
+
+"""
+
+# Find the second largest number in the list.
+
+data = [12,54,105,20,2,8,-10,86,45,30]
+
+largest = data[0]
+sec_largest = float('-inf')
+
+for i in data:
+    if i > largest:
+        sec_largest = largest
+        largest = i
+        
+    elif i > sec_largest and i != largest:
+        sec_largest = i
+            
+print("Largest Number :",largest)
+print("Second Largest Number :",sec_largest)
