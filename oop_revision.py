@@ -228,5 +228,74 @@ ravan.display()
 print("-"*50)
 ====================================================================================================
 
+## OOP Pillars / Features
+
+1. Inheritance
+2. Encapsulation
+3. Polymorphism
+4. Inheritance
+---------------------------------------------------------------------------------------------
+
+## 1. Inheritance : Parent - child relationship
+It is used to reuse the code.
+--------------------------------------------------------------------
+
+class Parent:
+    pin = 1234
+    def money(self):
+        print("Money from parent")
+        
+class Child(Parent):
+    pass
+
+c = Child()
+print(c.pin)
+c.money()
+------------------------------------------------------------------------------------
+
+class Parent:
+    pin = 1234
+    def money(self):
+        print("Money from parent")
+        
+class Child(Parent):
+    def study(self):
+        print('Study from child.')
+        # super().money()
+        
+    def money(self):
+        print("Money from child.")
+        super().money()  # to call parent method
+
+c = Child()
+print(c.pin)
+c.money()
+c.study()
+-----------------------------------------------------------------------------
+
+class Parent:
+    pin = 1234   # class variable / static variable ----> class reference
+    
+class Child(Parent):
+    pin = 3456
+    
+c = Child()
+print(c.pin) # it will print 3456 because child class has its own pin variable
+print(Parent.pin) # it will print 1234 because we are calling the parent class variable
+------------------------------------------------------------------------------------------------------
+
+Types -
+1. Simple Inheritance - 1 Parent and 1 Child
+2. Multi-level - 1 Parent and 1 Child and 1 Grandchild
+3. Multiple - 1 child and 2 Parents
+4. Hybrid - combination of multiple and multi-level
+5. Hierarchial - 1 Parent and multiple children
+------------------------------------------------------------------------------------------------------
+
+Assignment : Implement the above types of inheritance in python.
+
+-------------------------------------------------------------------------------------------------------
+
 
 """
+
