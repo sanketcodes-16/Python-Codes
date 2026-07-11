@@ -296,6 +296,28 @@ Assignment : Implement the above types of inheritance in python.
 
 -------------------------------------------------------------------------------------------------------
 
+## Example of Multiple Inheritance -
+
+class Father:
+    def money(self):
+        print("Money from Father.")
+        
+class Mother:
+    def money(self):
+        print("Money from Mother.")
+        
+# class Child(Father,Mother):
+#     pass
+
+class Child(Mother,Father):
+    pass
+
+c = Child()
+c.money()
+--------------------------------------------------------------------
+
+## 2. Encapsulation -
 
 """
 
+    
