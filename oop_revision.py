@@ -316,8 +316,123 @@ c = Child()
 c.money()
 --------------------------------------------------------------------
 
+1. Single Inheritance - 
+One child class inherits from one parent class.
+-------------------------------------------------
+class Animal:
+    def sound(self):
+        print("Animal makes sound.")
+        
+class Dog(Animal):
+    def bark(self):
+        print("Dog is Barking.")
+        
+d = Dog()
+d.sound()
+d.bark()
+-------------------------------------------------------------------------------------
+
+2. Multiple Inheritance -
+One child inherits from more than one parent.
+---------------------------------------------------
+class Father:
+    def money(self):
+        print("Money from Father.")
+        
+class Mother:
+    def money(self):
+        print("Money from mother.")
+        
+class Child(Mother,Father):
+    def study(self):
+        print("Child is studying.")
+        
+obj = Child()
+obj.study()
+obj.money()
+-------------------------------------------------------------------------------------------
+
+3. Multilevel Inheritance -
+
+A child becomes a parent for another child.
+
+GrandParent <-------- Parent <-------- Child
+---------------------------------------------------
+
+class Country:
+    def pm(self):
+        print("Prime Minister of India is Shri. Narendra Modi.")
+        
+class State(Country):
+    def cm(self):
+        print("The CM of Maharashtra is Devendra Fadanvis.")
+        
+class City(State):
+    def dm(self):
+        print("The DM of Pune is Jitendra Dudi.")
+        
+c = City()
+c.dm()
+c.cm()
+c.pm()
+---------------------------------------------------------------------------------------------
+
+4. Hierarchial Inheritance - 
+One parent has multiple child classes.
+---------------------------------------------
+
+class RBI:
+    def bank(self):
+        print("This is Reserve Bank of India.")
+        
+class SBI(RBI):
+    def sbi_branch(self):
+        print("This is SBI branch under RBI.")
+        
+class HDFC(RBI):
+    def hdfc_brach(self):
+        print("This is HDFC branch under RBI.")
+        
+s = SBI()
+h = HDFC()
+
+s.bank()
+s.sbi_branch()
+print("-"*50)
+h.bank()
+h.hdfc_brach()
+print('-'*50)
+------------------------------------------------------------------------------------------------------------
+
+5. Hybrid Inheritance - 
+A combination of two or more inheritance types (such as multiple + multilevel).
+-------------------------------------------------------------------------------------
+
+class A:
+    def display1(self):
+        print("This is class A.")
+        
+class B(A):
+    def dispaly2(self):
+        print("This is class B.")
+        
+class C(A):
+    def display3(self):
+        print("THis is class C.")
+        
+class D(B,C):
+    def display4(slef):
+        print("This is class D.")
+        
+d = D()
+d.display1()
+d.dispaly2()
+d.display3()
+d.display4()
+----------------------------------------------------------------------------------------------------------------------
+======================================================================================================================
+
 ## 2. Encapsulation -
 
 """
 
-    
