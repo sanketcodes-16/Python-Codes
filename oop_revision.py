@@ -433,6 +433,93 @@ d.display4()
 ======================================================================================================================
 
 ## 2. Encapsulation -
+Data Hiding
+Hiding essential information from outside world is called as Encapsulation.
+Best example of encapsulation is Class.
+-----------------------------------------------------------------------------------
+
+class Car:
+    model = "BMW"
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
+
+v3 = Car('i8',10000000)
+
+print(model)     # as these members are inside the class hence we can't access them | we need an 
+print(name,price)
+--------------------------------------------------------------------------------------------------------------
+
+to implement encapsulation in other language we have 
+access modifiers - like public, private, protected
+------------------------------------------------------------------
+
+class Test:
+    a = 100   # public
+    _b = 200  # protected   # protected member (by convention, it is not enforced by python)
+    __c = 300   # private member (name mangling, it is not accessible outside the class)
+    
+t = Test()
+# print(t.a,t.b,t.c) # we can acess all the members of the class because they are public
+# print(t.a,t._b,t.c)  # protected member (by convention, it is not enforced by python)
+print(t.a,t._b,t._Test__c)  # we can access all the mebers of the class because they are 
+---------------------------------------------------------------------------------------------------------
+
+class Test:
+    a = 100   # public
+    _b = 200  # protected   # protected member (by convention, it is not enforced by python)
+    __c = 300   # privte member (name mangling, it is not accessible outside the class)
+    
+t = Test()
+# print(t.a,t.b,t.c) # we can acess all the members of the class because they are public
+# print(t.a,t._b,t.c)  # protected member (by convention, it is not enforced by python)
+print(t.a,t._b,t._Test__c)  # we can access all the mebers of the class because they are 
+t._Test__c = 400   # we can modify private member using the name mangling
+print(t._Test__c)
+
+sanket = Test()
+print(sanket.a,sanket._b,sanket._Test__c)
+---------------------------------------------------------------------------------------------------------------------
+
+# Assignment :1. Create public, private, protected methods and try to access them.
+----------------------------------------------------------------------------------
+
+class A:
+    def show(self):         # public method
+        print("Method A.")
+        
+    def _show1(self):       # protected method
+        print("Method B.")
+        
+    def __show3(self):      # private method
+        print("Method C.")
+        
+# Access all three public, protected and private methods
+
+obj = A()
+obj.show()  # access public method
+obj._show1()  # access protected method
+obj._A__show3()  # access private method
+==================================================================================================
+# 2. Try to access members(public, private, protected) of Parent class in the child.
+
+class A:
+    a = 100      # public member
+    _b = 200     # protected member
+    __c = 300    # private member
+    
+# Access Public, Protected and Private members of Parent class in to Child Class.
+
+class B(A):
+    pass
+
+obj = B()
+print(obj.a)   # access public member
+print(obj._b)  # access protected member
+print(obj._A__c)  # access private member
+==================================================================================================================================================
 
 """
 
+
+    
